@@ -1,0 +1,16 @@
+import express from "express";
+
+const app = express();
+
+const PORT = Number(process.env.PORT) || 3000;
+
+app.get("/", (_req, res) => {
+  res.json({
+    service: "NEXVORIX Backend",
+    status: "running",
+  });
+});
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`NEXVORIX Backend running on port ${PORT}`);
+});
