@@ -1,0 +1,50 @@
+# NEXVORIX Backend — Progress Notes
+
+## Day 1 (28 Sep 2026)
+- Node.js v24.21.0 install
+- Express + TypeScript setup
+- tsconfig.json बना
+- src/server.ts बना
+- Server चालू — localhost:3000 पर running
+- Response: {"service":"NEXVORIX Backend","status":"running"}
+
+## Day 2 (28 Sep 2026 - दूसरा session)
+- src/routes folder बनाया
+- src/services folder बनाया
+- src/config folder बनाया
+- पहला route बनाया: /health
+- server.ts update किया
+- Browser में test — SUCCESS ✅
+- Response: {"status":"ok","service":"NEXVORIX Backend","timestamp":"..."}
+
+## Day 2 (दूसरा session — जारी)
+- 6 routes बनाए: /health, /auth, /irn, /ewb, /cancel, /qr-verify
+- server.ts update किया — सब routes जोड़े
+- Browser में सभी 6 routes test किए — सब ✅
+- Backend skeleton तैयार
+## Day 2 (तीसरा session)
+- src/config/app.ts बनाई (settings)
+- src/services/auth.service.ts बनाई (पहली service)
+- routes/auth.ts को service से जोड़ा
+- Server restart किया
+- Browser cache clear किया
+- Route + Service connection LIVE ✅
+- Response: {"status":"not_implemented","message":"Auth service skeleton ready..."}
+## Day 3 (पाँचवाँ session)
+- 5 POST endpoints बनाए:
+  - POST /auth/login ✅
+  - POST /irn/generate ✅
+  - POST /ewb/generate ✅
+  - POST /cancel ✅
+  - POST /qr-verify ✅
+- सभी services update कीं (validation के साथ)
+- सभी endpoints test किए — सब PASS ✅
+- Validation काम कर रही (खाली data पर error)
+
+## Backend अब तैयार
+- 5 POST endpoints (mobile के लिए)
+- 5 GET endpoints
+- Config + .env
+- Logger + Error handler
+- 404 handler
+- Structure: production-grade
